@@ -7,10 +7,7 @@ from django.db import models
 class URLRecord(models.Model):
 	original_url = models.TextField()
 
-	def create_record(self):
-		self.save()
-
-	def retrieve_record(self):
+	def retrieve_url(self):
 		return self.original_url
 
 
