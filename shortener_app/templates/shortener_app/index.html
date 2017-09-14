@@ -25,9 +25,9 @@
 			<div class = 'row'>
 				<div class = 'col-xs-12'>
 					<h1>Simplify your links</h1>
-					<form>
-						<input type='text' placeholder='Your original URL here' />
-						<input type='submit' value='Shortify it!'
+					<form method='POST' class='record-url-form'>{% csrf_token %}
+						{{ form.as_p }}
+						<button type='submit' class='save btn btn-default'>Shortify it!</button>
 					</form>
 			</div>
 		</div>
